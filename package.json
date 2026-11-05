@@ -1,0 +1,20 @@
+{
+  "name": "capacitor-inappbrowser-inset-repro",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "setup": "cap add android && cap sync android",
+    "android": "cap run android",
+    "probe": "node probe.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.6.0",
+    "@capacitor/core": "8.6.0",
+    "@capgo/capacitor-inappbrowser": "8.27.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.0"
+  }
+}

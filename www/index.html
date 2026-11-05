@@ -1,0 +1,13 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body style="padding:80px 16px">
+<button id="off" style="font-size:24px;margin:16px">Open: margin off</button>
+<button id="on" style="font-size:24px;margin:16px">Open: margin on</button>
+<button id="blank" style="font-size:24px;margin:16px">Open: blank toolbar, margins on</button>
+<script>
+const InAppBrowser = Capacitor.Plugins.CapgoInAppBrowser
+const open = (options) => InAppBrowser.openWebView({ url: 'https://example.com', ...options })
+document.getElementById('off').onclick = () => open({ enabledSafeBottomMargin: false })
+document.getElementById('on').onclick = () => open({ enabledSafeBottomMargin: true })
+document.getElementById('blank').onclick = () => open({ enabledSafeBottomMargin: true, enabledSafeTopMargin: true, toolbarType: 'blank' })
+</script>
